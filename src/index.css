@@ -37,7 +37,7 @@ body {
 /* Counter */
 .main .counter {
   position: absolute;
-  bottom: 80px;
+  bottom: 140px;
   left: 50%;
   transform: translateX(-50%);
   font-size: clamp(3rem, 7vw + 1rem, 6rem);
