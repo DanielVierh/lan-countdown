@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import DateBanner from "./components/DateBanner";
 
 function App() {
   const [timeLeft, setTimeLeft] = useState({});
@@ -35,9 +36,7 @@ function App() {
     <main className="main">
       <img src="bg.png" alt="background" />
 
-      <div className="date-shield">
-        25.10 <br /> 17:00
-      </div>
+      <DateBanner date={"01.10"} time={"17:10"} />
 
       <div className="counter">
         {timeLeft.days} {timeLeft.days === 1 ? "Tag" : "Tage"} <br />
