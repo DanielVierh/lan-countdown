@@ -36,7 +36,7 @@ function App() {
     <main className="main">
       <img src="bg.png" alt="background" />
 
-      <DateBanner date={"01.10"} time={"17:10"} />
+      <DateBanner date={"25.10"} time={"17:10"} />
 
       <div className="counter">
         {timeLeft.days} {timeLeft.days === 1 ? "Tag" : "Tage"} <br />
