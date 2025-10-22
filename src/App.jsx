@@ -32,6 +32,14 @@ function App() {
 
   const return_zero = (val) => (val < 10 ? `0${val}` : val);
 
+  const alternate_return = (days, hours, minutes) => {
+    if (days === 0 && hours === 0 && minutes === 0) {
+      return true;
+    } else {
+      return false;
+    }
+  };
+
   return (
     <main className="main">
       <img src="bg.png" alt="background" />
@@ -39,9 +47,20 @@ function App() {
       <DateBanner date={"25.10"} time={"17:10"} />
 
       <div className="counter">
-        {timeLeft.days} {timeLeft.days === 1 ? "Tag" : "Tage"} <br />
-        {return_zero(timeLeft.hours)}:{return_zero(timeLeft.minutes)}:
-        {return_zero(timeLeft.seconds)}
+        {alternate_return(
+          timeLeft.days ?? 0,
+          timeLeft.hours ?? 0,
+          timeLeft.minutes ?? 0
+        ) ? (
+          "Ok, ich geh dann mal"
+        ) : (
+          <>
+            {timeLeft.days ?? 0} {timeLeft.days === 1 ? "Tag" : "Tage"} <br />
+            {return_zero(timeLeft.hours ?? 0)}:
+            {return_zero(timeLeft.minutes ?? 0)}:
+            {return_zero(timeLeft.seconds ?? 0)}
+          </>
+        )}
       </div>
     </main>
   );
