@@ -7,7 +7,7 @@ function App() {
   useEffect(() => {
     const elapse_time = () => {
       const now = new Date();
-      const targetDate = new Date("2025-10-25T17:00:00");
+      const targetDate = new Date("2025-12-20T16:00:00");
       const difference = targetDate - now;
 
       if (difference <= 0) {
@@ -44,7 +44,7 @@ function App() {
     <main className="main">
       <img src="bg.png" alt="background" />
 
-      <DateBanner date={"25.10"} time={"17:10"} />
+      <DateBanner date={"20.12"} time={"16:00"} />
 
       <div className="counter">
         {alternate_return(
